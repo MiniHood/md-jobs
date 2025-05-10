@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MD Job Creator Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main-container">
+        <header>
+            <h1>MD Job Creator Tool</h1>
+        </header>
+        <section class="card">
+            <button class="btn-primary" id="selectImagesBtn">Select Images Folder</button>
+            <input type="text" id="jobName" placeholder="Enter job name" />
+        </section>
+        <section class="toggles">
+            <div class="toggle-row" id="jobRanksToggleRow">
+                <label class="switch">
+                    <input type="checkbox" id="toggleJobRanks">
+                    <span class="slider"></span>
+                </label>
+                <span>Make your job and ranks code</span>
+            </div>
+            <div class="dropdown-section" id="jobRanksDropdown">
+                <div class="dropdown-card">
+                    <div class="section-header">
+                        <span class="section-title">Job Configuration</span>
+                        <button class="close-btn" id="closeJobRanks">&times;</button>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" id="jobLabel" placeholder="e.g. Police" />
+                        <input type="text" id="jobType" placeholder="e.g. looters/restaurant" />
+                        <select id="jobDefaultPay">
+                            <option value="true">True</option>
+                            <option value="false">False</option>
+                        </select>
+                        <select id="jobDefaultDuty">
+                            <option value="true">True</option>
+                            <option value="false">False</option>
+                        </select>
+                    </div>
+                    <div class="subsection">
+                        <div class="subsection-title">Grades</div>
+                        <div id="gradesList"></div>
+                        <div class="form-row" id="gradeForm">
+                            <input type="number" id="gradeLevel" placeholder="e.g. 0" />
+                            <input type="text" id="gradeName" placeholder="e.g. Recruit" />
+                            <input type="number" id="gradePayment" placeholder="e.g. 50" />
+                            <select id="gradeIsBoss">
+                                <option value="false">False</option>
+                                <option value="true">True</option>
+                            </select>
+                            <button class="btn-primary" id="addGradeBtn" type="button">Add Grade</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="toggle-row">
+                <label class="switch">
+                    <input type="checkbox" id="toggleCatering">
+                    <span class="slider"></span>
+                </label>
+                <span>Catering</span>
+            </div>
+            <div class="toggle-row">
+                <label class="switch">
+                    <input type="checkbox" id="toggleClosedShops">
+                    <span class="slider"></span>
+                </label>
+                <span>Closed Shops</span>
+            </div>
+            <div class="toggle-row">
+                <label class="switch">
+                    <input type="checkbox" id="toggleCrafting">
+                    <span class="slider"></span>
+                </label>
+                <span>Crafting Table</span>
+            </div>
+            <div class="toggle-row">
+                <label class="switch">
+                    <input type="checkbox" id="toggleStore">
+                    <span class="slider"></span>
+                </label>
+                <span>Store System</span>
+            </div>
+            <div class="toggle-row">
+                <label class="switch">
+                    <input type="checkbox" id="toggleLocation">
+                    <span class="slider"></span>
+                </label>
+                <span>Location System</span>
+            </div>
+            <div class="toggle-row">
+                <label class="switch">
+                    <input type="checkbox" id="toggleConsumable">
+                    <span class="slider"></span>
+                </label>
+                <span>Consumable Maker</span>
+            </div>
+        </section>
+        <section class="card">
+            <h2>Map Blip Configuration</h2>
+            <div class="form-row">
+                <input type="number" placeholder="Icon ID" />
+                <input type="number" placeholder="Color ID" />
+                <input type="number" step="0.1" placeholder="Scale" />
+                <input type="text" placeholder="Display Name" />
+            </div>
+            <input type="text" placeholder="Location (vector4)" />
+        </section>
+        <button class="btn-primary export-btn">Export Job Configuration</button>
+        <footer>
+            <p>This tool creates configuration files for in-game jobs.</p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
