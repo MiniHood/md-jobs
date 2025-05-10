@@ -36,7 +36,7 @@
 - **Catering System**: Enable catering orders with commission payouts for players.
 - **Closed Shops**: Add restricted shops with unique inventories and ped models.
 - **Easy Setup**: Use the provided website tool to generate configuration files quickly.
-
+-- **In Game Job Maker**: Create jobs directly in-game using the provided tool.
 
 
 ## Dependencies
